@@ -29,5 +29,6 @@ return [
     'base_location' =>  "Base Location",
     'active_user'   =>  "Active User",
 
-    'sign_in' => 'Sign In'
+    'module_title'  => 'Users',
+    'sign_in'       => 'Sign In'
 ];

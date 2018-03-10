@@ -29,6 +29,7 @@ return [
     'base_location' =>  "Lokasi",
     'active_user'   =>  "User Aktif",
 
-    'sign_in' => 'Masuk'
+    'module_title'  => 'Pengguna',
+    'sign_in'       => 'Masuk'
 
 ];

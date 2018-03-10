@@ -12,4 +12,6 @@ return [
     'level'     => 'Level',
     'name'      => 'Nama',
     'rolegroups'=> 'Roles Groups',
+
+    'module_title'  => 'Jabatan'
 ];

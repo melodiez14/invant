@@ -12,4 +12,6 @@ return [
     'level'     => 'Level',
     'name'      => 'Name',
     'rolegroups'=> 'Roles Groups',
+
+    'module_title'  => 'Role Groups'
 ];

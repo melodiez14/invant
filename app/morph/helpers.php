@@ -27,18 +27,18 @@ function build_dashboard_nav()
           'subnav' => array(
               array(
                 'url' => route('users.index'),
-                'title' => trans('user.users'),
+                'title' => trans('user.module_title'),
                 'authorized'  => Role::isAuthorized($roles, 'users.index')
               ),
               array(
                 'url' => route('rolegroups.index'),
-                'title' => trans('user.rolegroups'),
+                'title' => trans('rolegroup.module_title'),
                 'authorized'  => Role::isAuthorized($roles, 'rolegroups.index')
               ),
               array(
                 'url'     => route('modules.index'),
                 'authorized'  => Role::isAuthorized($roles, 'modules.index'),
-                'title'   => trans('module.modules'),
+                'title'   => trans('module.module_title'),
             ),
           )
         ),
