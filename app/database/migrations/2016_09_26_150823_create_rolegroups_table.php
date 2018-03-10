@@ -14,10 +14,11 @@ class CreateRolegroupsTable extends Migration {
 	{
 		Schema::create('rolegroups', function(Blueprint $table)
 		{
-			$table->increments('id');
-            $table->string('rolegroup_name');
-            $table->integer('rolegroup_depth')->default(1);
+			$table->increments('id')->unsigned();
+            $table->string('name');
 			$table->timestamps();
+
+			$table->index('id', 'idx_rolegroup_id');
 		});
 	}
 

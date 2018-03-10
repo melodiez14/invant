@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="container aside-xxl">
-        <a class="navbar-brand block" href="index.html" style="color: #f9f9f9;">IDMS</a>
+        <!-- <a class="navbar-brand block" href="/" style="color: #f9f9f9;">Inventory Management</a> -->
         <section class="panel panel-default bg-white m-t-lg">
             <header class="panel-heading text-center">
                 <strong>Sign in</strong>
@@ -42,9 +42,7 @@
                 <div class="checkbox">
                     <label>{{ Form::checkbox('remember_me') }} Keep me logged in</label>
                 </div>
-                <a href="{{ url('password/remind')  }}" class="pull-right m-t-xs"><small>Forgot password?</small></a>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-                <div class="line line-dashed"></div>
+                <button type="submit" class="btn btn-primary pull-right clearfix">{{trans('user.sign_in')}}</button>
 
                 {{-- Display if not google chrome --}}
 

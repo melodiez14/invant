@@ -49,7 +49,7 @@
     <div class="text-center padder clearfix">
       <p>
         <small>Information and Data Management System <br>
-        Save The Children &copy; 2017</small>
+        Invast &copy; 2017</small>
       </p>
     </div>
   </footer>

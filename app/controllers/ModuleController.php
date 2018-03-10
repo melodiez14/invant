@@ -52,10 +52,10 @@ class ModuleController extends \BaseController {
 	{
 		$modules['module_name'] = trim(Request::get('module_name'));
 		$modules['module_core']	= Request::has('module_core');
-		$modules['module_alias']= adv_snake_case(Request::get('module_alias'));
+		$modules['alias']= adv_snake_case(Request::get('alias'));
 
 		$validator = Validator::make($modules, [
-			'module_alias'	=> 'required|unique:modules,module_alias|max:32|alpha_dash',
+			'alias'	=> 'required|unique:modules,alias|max:32|alpha_dash',
 			'module_name'	=> 'required|max:255',
 			'module_core'	=> 'required|boolean'
 		]);

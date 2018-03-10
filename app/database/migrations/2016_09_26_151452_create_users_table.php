@@ -14,18 +14,18 @@ class CreateUsersTable extends Migration {
 	{
 		Schema::create('users', function(Blueprint $table)
 		{
-			$table->increments('id');
-            $table->integer('rolegroup_id')->unsigned();
+			$table->increments('id')->unsigned();
+			$table->string('name', 100);
             $table->string('email')->unique();
             $table->string('password', 64);
-            $table->boolean('is_active');
-            $table->string('activation_code')->nullable();
             $table->rememberToken();
 			$table->timestamps();
+            $table->integer('rolegroup_id')->unsigned();
 
-            $table->index('rolegroup_id', 'users_indexes');
-            $table->foreign('rolegroup_id')->references('id')->on('rolegroups')
-                ->onUpdate('CASCADE');
+			$table->foreign('rolegroup_id')->references('id')->on('rolegroups');
+			
+			$table->index('id', 'idx_users_id');
+            $table->index('rolegroup_id', 'idx_users_rolegroup_id');
 		});
 	}
 

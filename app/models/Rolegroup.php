@@ -33,10 +33,10 @@ class Rolegroup extends Eloquent {
             if (!isset($roleCooked['mod_' . $role->module_id])) {
                 $roleCooked['mod_' . $role->module_id] = [
                     'module_id' => $role->module_id,
-                    'abilities' => [$role->role_ability]
+                    'abilities' => [$role->ability]
                 ];
             } else {
-                array_push($roleCooked['mod_' . $role->module_id]['abilities'], $role->role_ability);
+                array_push($roleCooked['mod_' . $role->module_id]['abilities'], $role->ability);
             }
         }
 
@@ -44,15 +44,5 @@ class Rolegroup extends Eloquent {
             array_push($roleServe, $cooked);
 
         return $roleServe;
-    }
-
-    public function log_updated_by()
-    {
-        return $this->belongsTo(User::class, 'updated_by', 'user_id');
-    }
-
-    public function log_created_by()
-    {
-        return $this->belongsTo(User::class, 'created_by', 'user_id');
     }
 }

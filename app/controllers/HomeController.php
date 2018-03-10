@@ -35,7 +35,6 @@ class HomeController extends BaseController {
         $credentials = [
             'email'     => Input::get('email'),
             'password'  => Input::get('password'),
-            'is_active' => 1
         ];
 
         $remember_me = Input::has('remember_me');

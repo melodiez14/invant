@@ -100,12 +100,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         {{-- Profile Picture --}}
-                        <span class="thumb-sm avatar pull-left">
-                            {{-- If user has photo (staff) --}} @if (isset(Auth::user()->profile->photo_id))
-                            <img src="{{ route('uploads.show', ['uploads' => Auth::user()->profile->photo_id]) }}"> @else
-                            <img src="{{ asset('images/avatar_default.jpg')}}"> {{-- default pict if no picture --}} @endif
-                        </span>
-                        {{ (isset(Auth::user()->profile->name)) ? Auth::user()->profile->name : 'Anonymous' }}
+                        {{ (isset(Auth::user()->email)) ? Auth::user()->email : 'Anonymous' }}
                         <b class="caret"></b>
                     </a>
                     {{-- BEGIN Profile Menu --}}
@@ -115,15 +110,6 @@
                         {{-- Menu Item--}}
                         <li>
                             <a href="{{ route('users.edit', ['users' => Auth::user()->id]) }}">Update Account</a>
-                        </li>
-                        <li>
-                            <?php
-                                $upUrl = route('staffs.create') . '?user=' . Auth::user()->id;
-
-                                if (isset(Auth::user()->profile->id)) $upUrl = route('staffs.edit', ['staffs' => Auth::user()->profile->id]);
-                            ?>
-
-                                <a href="{{ $upUrl }}">Update Profile</a>
                         </li>
                         {{-- Divider line --}}
                         <li class="divider"></li>

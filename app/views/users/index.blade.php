@@ -45,13 +45,6 @@
         );
         $columns = array('id','email','rolegroup','name', 'active');
 
-        if($XUserMode) {
-            $options[] = array(
-                'sTitle' => trans('general.action'),
-                'aTargets' => [5],
-                'bSortable' => false);
-            $columns[] = 'action';
-        }
 
         ?>
         {{-- Specify datatable with custom title and first column (id) hidden --}}

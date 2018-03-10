@@ -49,7 +49,7 @@
     <div class="text-center padder clearfix">
       <p>
         <small>Information and Data Management System <br>
-        Save The Children &copy; 2013</small>
+        Invast &copy; {{ date("Y") }}</small>
       </p>
     </div>
   </footer>

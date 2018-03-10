@@ -208,10 +208,10 @@ function debugVar($var)
 /**
  * Memeriksa apakah user yang telah login memiliki kemampuan X di modul tertentu
  * @param string $ability isinya 'read', 'create', 'update', atau 'delete'
- * @param string $module_alias isinya alias di database untuk masing-masing modul
+ * @param string $alias isinya alias di database untuk masing-masing modul
  * @return boolean
  */
-function isXUser($ability, $module_alias)
+function isXUser($ability, $alias)
 {
     if(!Auth::check())
         return false;
@@ -221,9 +221,9 @@ function isXUser($ability, $module_alias)
 
     $abl = "X" . strtoupper($ability);
 
-    $role = Role::where('rolegroup_id', $rgid)->where('role_ability', $abl)
-    ->whereHas('module', function($query) use($module_alias) {
-        $query->where('module_alias', $module_alias);
+    $role = Role::where('rolegroup_id', $rgid)->where('ability', $abl)
+    ->whereHas('module', function($query) use($alias) {
+        $query->where('alias', $alias);
     })->first();
 
     return isset($role->module->id);

@@ -85,7 +85,7 @@ class RolegroupsController extends \BaseController {
 					array_push($readyRoles, [
 						'rolegroup_id'	=> $rgId,
 						'module_id'	=> $value->module_id,
-						'role_ability'	=> $abl,
+						'ability'	=> $abl,
 						'created_at'	=> $currentTimestamp,
 						'updated_at'	=> $currentTimestamp
 					]);
@@ -190,7 +190,7 @@ class RolegroupsController extends \BaseController {
 					array_push($readyRoles, [
 						'rolegroup_id'	=> $rolegroups->id,
 						'module_id'	=> $value->module_id,
-						'role_ability'	=> $abl,
+						'ability'	=> $abl,
 						'created_at'	=> $currentTimestamp,
 						'updated_at'	=> $currentTimestamp
 					]);

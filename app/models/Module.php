@@ -1,8 +1,9 @@
 <?php
 
-class Module extends \Eloquent {
+class Module extends Eloquent {
+    
     protected $table    = 'modules';
-	protected $fillable = ['module_alias', 'module_name', 'module_core'];
+	protected $fillable = ['alias', 'name'];
 
     /**
      * Initial relations one to many with roles table

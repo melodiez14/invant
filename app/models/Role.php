@@ -3,7 +3,7 @@
 class Role extends Eloquent {
 
     protected $table    = 'roles';
-	protected $fillable = ['rolegroup_id', 'module_id','role_ability'];
+	protected $fillable = ['rolegroup_id', 'module_id', 'ability'];
     protected $with     = ['module'];
 
     public static function isAuthorized($roles, $routename)
@@ -13,10 +13,10 @@ class Role extends Eloquent {
 
         foreach($roles as $role)
         {
-            if( !isset($abilities[$role->module->module_alias]) ) {
-                $abilities[$role->module->module_alias] = [$role->role_ability];
+            if( !isset($abilities[$role->module->alias]) ) {
+                $abilities[$role->module->alias] = [$role->ability];
             } else {
-                array_push($abilities[$role->module->module_alias], $role->role_ability);
+                array_push($abilities[$role->module->alias], $role->ability);
             }
 
         }
@@ -47,24 +47,6 @@ class Role extends Eloquent {
 
     }
 
-    public static function isRoleDepthViolation($model)
-    {
-        $user       = Auth::user();
-        $userRg     = $user->rolegroup;
-
-        if($model instanceOf Rolegroup){
-            $currentRg  = $model;
-        } else {
-            throw new \Exception("Model is not Rolegroup");
-        }
-
-        if($userRg->rolegroup_depth >= $currentRg->rolegroup_depth)
-            throw new \Exception(trans('rolegroup.depth_violation'));
-
-
-        return false;
-    }
-
     /**
      * Get users in current ability
      * @return str $ability
@@ -74,7 +56,7 @@ class Role extends Eloquent {
     public static function getUsersByAbility($ability, Module $module)
     {
         $returned = [];
-        $roles = self::where('role_ability', $ability)->where('module_id', $module->id)
+        $roles = self::where('ability', $ability)->where('module_id', $module->id)
             ->with(['rolegroup' => function($query) {
                 $query->with('users');
             }])->get();

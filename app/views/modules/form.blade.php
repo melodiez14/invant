@@ -24,8 +24,8 @@ if(isset($module)) {
     </div>
     <form class="form panel-body" method="post" action="{{ $formAction }}" id="module-form">
         <div class="form-group">
-            <label for="module_alias">{{ trans('module.module_alias') }}</label>
-            <input type="text" name="module_alias" class="form-control" value="{{ $editMode ? $module->module_alias : null }}" {{ $editMode ? "disabled=\"disabled\"" : null }} />
+            <label for="alias">{{ trans('module.alias') }}</label>
+            <input type="text" name="alias" class="form-control" value="{{ $editMode ? $module->alias : null }}" {{ $editMode ? "disabled=\"disabled\"" : null }} />
         </div>
         <div class="form-group">
             <label for="module_name">{{ trans('module.module_name') }}</label>
