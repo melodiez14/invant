@@ -1,0 +1,35 @@
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.show {
+    display: block;
+}
+
+.tab-contents .select2-combo,
+.tab-contents .tab-content-btn {
+    display: none;
+}
+
+.tab-contents a.delete-question {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 12px;
+}
+
+.tab-contents .category-panel {
+    position: relative;
+}
+
+.tab-contents .category-panel .tab-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: visible;
+}
+
+.tab-contents .category-panel .tab-controls .tooltip {
+
+}
