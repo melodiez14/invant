@@ -126,8 +126,8 @@ return array(
         /* Additional Packages */
         'Way\Generators\GeneratorsServiceProvider',
 		'Chumper\Datatable\DatatableServiceProvider',
-		'Morph\Validator\ValidatorServiceProvider'
-
+		'Morph\Validator\ValidatorServiceProvider',
+		'yajra\Datatables\DatatablesServiceProvider',
 	),
 
 	/*
@@ -196,7 +196,7 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
 		/* Additional Packages */
 		'Datatable' 	  => 'Chumper\Datatable\Facades\DatatableFacade',
-
+		'Datatables'      => 'yajra\Datatables\Datatables',
 	),
 
 );

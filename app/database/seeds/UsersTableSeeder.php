@@ -13,15 +13,13 @@ class UsersTableSeeder extends Seeder {
         $records = [
             [
 				'rolegroup_id'  => 1,
-				'name' 			=> 'Risal Falah',
-                'email'         => 'risal.falah@gmail.com',
+				'username'      => 'superadmin',
                 'password'      => Hash::make('qwerty123'),
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],[
 				'rolegroup_id'  => 2,
-				'name'			=> 'Asep Nur Muhammad',
-                'email'         => 'asepnur.isk@gmail.com',
+				'username'      => 'dataentry',
                 'password'      => Hash::make('qwerty123'),
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')

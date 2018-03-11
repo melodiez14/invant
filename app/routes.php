@@ -21,6 +21,7 @@ Route::model('modules', 'Module');
 Route::model('rolegroups', 'Rolegroup');
 Route::model('uploads', 'Upload');
 Route::model('users', 'User');
+Route::model('customers', 'Customer');
 
 /* Outside Resource Controller*/
 Route::post('/language', array(
@@ -30,7 +31,7 @@ Route::post('/language', array(
 
 Route::group(['before' => 'authorize'], function() {
     Route::get('dashboard', ['as' => 'dashboard.index', 'uses' => "DashboardController@getDashboard"]);
-
+    
     /* Resource Controllers */
     Route::resource('libraries', 'LibrariesController');
     Route::resource('modules', 'ModuleController');
@@ -38,6 +39,7 @@ Route::group(['before' => 'authorize'], function() {
     Route::resource('uploads', 'UploadController');
     Route::resource('users', 'UsersController');
     Route::resource('currencies', 'CurrenciesController');
+    Route::resource('customers', 'CustomersController');
 });
 
 // Route::controller('locations', 'LocationsController');

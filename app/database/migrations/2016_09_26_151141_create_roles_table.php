@@ -17,14 +17,14 @@ class CreateRolesTable extends Migration {
 			$table->increments('id');
             $table->integer('rolegroup_id')->unsigned();
             $table->integer('module_id')->unsigned();
-            $table->string('ability', 7);
+			$table->enum('ability', ['CREATE', 'READ', 'UPDATE', 'DELETE']);
 			$table->timestamps();
 
-            $table->index(['rolegroup_id', 'module_id'], 'idx_roles_rolegroup_id_module_id');
-            $table->index('id', 'idx_roles_id');
-
             $table->foreign('rolegroup_id')->references('id')->on('rolegroups');
-            $table->foreign('module_id')->references('id')->on('modules');
+			$table->foreign('module_id')->references('id')->on('modules');
+			
+            $table->index('id');
+            $table->unique(['rolegroup_id', 'module_id', 'ability']);
 		});
 	}
 

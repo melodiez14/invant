@@ -14,10 +14,13 @@ class CreateModulesTable extends Migration {
 	{
 		Schema::create('modules', function(Blueprint $table)
 		{
-			$table->increments('id')->unsigned();
-            $table->string('alias', 20)->unique();
+			$table->increments('id');
+            $table->string('alias', 20);
             $table->string('name');
 			$table->timestamps();
+
+			$table->index('id');
+			$table->unique('alias');
 		});
 	}
 

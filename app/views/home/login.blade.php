@@ -26,10 +26,10 @@
                 @endif
 
                 <div class="form-group">
-                    {{ Form::label('email', 'E-mail Address', array('class' => 'control-label')) }}
-                    {{ Form::email('email', null, array(
+                    {{ Form::label('username', 'Username', array('class' => 'control-label')) }}
+                    {{ Form::text('username', null, array(
                         'class' => 'form-control input-lg',
-                        'placeholder' => 'Enter Email'
+                        'placeholder' => 'Enter username'
                         )) }}
                 </div>
                 <div class="form-group">

@@ -32,6 +32,12 @@ class ModulesTableSeeder extends Seeder {
                 'name'          => 'Roles Groups',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
+            ],
+            [
+                'alias'         => 'customers',
+                'name'          => 'Customers',
+                'created_at'    => date('Y-m-d H:i:s'),
+                'updated_at'    => date('Y-m-d H:i:s')
             ]
         ];
 

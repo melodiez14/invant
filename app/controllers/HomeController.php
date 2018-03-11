@@ -33,7 +33,7 @@ class HomeController extends BaseController {
     public function postLogin()
     {
         $credentials = [
-            'email'     => Input::get('email'),
+            'username'  => Input::get('username'),
             'password'  => Input::get('password'),
         ];
 

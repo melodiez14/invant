@@ -229,6 +229,33 @@ function isXUser($ability, $alias)
     return isset($role->module->id);
 }
 
+function getAbilities($alias) {
+    if(!Auth::check()) {
+        return null;
+    }
+
+    $abilities = (object) [
+        'create'    => false,
+        'read'      => false,
+        'update'    => false,
+        'delete'    => false,
+    ];
+
+    $roles = Role::select('ability')
+        ->whereHas('module', function($query) use ($alias) {
+            $query->where('alias', $alias);
+        })
+        ->limit(4)
+        ->get();
+
+
+    foreach ($roles as $role) {
+        $abilities->{strtolower($role->ability)} = true;
+    }
+
+    return $abilities;
+}
+
 /**
  * Custom array diff function for very large array (compare b to a)
  * This is the simple algorithm:

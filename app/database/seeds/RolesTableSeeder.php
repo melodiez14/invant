@@ -13,114 +13,142 @@ class RolesTableSeeder extends Seeder {
              *  General Administrator
              */
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 1,
-                'ability'       => 'XREAD',
+                'rolegroup_id'  => 1,
+                'module_id'     => 1,
+                'ability'       => 'READ',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 1,
-                'ability'       => 'XCREATE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 1,
+                'ability'       => 'CREATE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 1,
-                'ability'       => 'XUPDATE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 1,
+                'ability'       => 'UPDATE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 1,
-                'ability'       => 'XDELETE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 1,
+                'ability'       => 'DELETE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 2,
-                'ability'       => 'XREAD',
+                'rolegroup_id'  => 1,
+                'module_id'     => 2,
+                'ability'       => 'READ',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 2,
-                'ability'       => 'XCREATE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 2,
+                'ability'       => 'CREATE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 2,
-                'ability'       => 'XUPDATE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 2,
+                'ability'       => 'UPDATE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 2,
-                'ability'       => 'XDELETE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 2,
+                'ability'       => 'DELETE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 3,
-                'ability'       => 'XREAD',
+                'rolegroup_id'  => 1,
+                'module_id'     => 3,
+                'ability'       => 'READ',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 3,
-                'ability'       => 'XCREATE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 3,
+                'ability'       => 'CREATE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 3,
-                'ability'       => 'XUPDATE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 3,
+                'ability'       => 'UPDATE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 3,
-                'ability'       => 'XDELETE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 3,
+                'ability'       => 'DELETE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 4,
-                'ability'       => 'XREAD',
-                'created_at'    => date('Y-m-d H:i:s'),
-                'updated_at'    => date('Y-m-d H:i:s')
-            ],
-            [
-                'rolegroup_id' => 1,
-                'module_id'    => 4,
-                'ability'       => 'XCREATE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 4,
+                'ability'       => 'READ',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
                 'rolegroup_id' => 1,
                 'module_id'    => 4,
-                'ability'       => 'XUPDATE',
+                'ability'       => 'CREATE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ],
             [
-                'rolegroup_id' => 1,
-                'module_id'    => 4,
-                'ability'       => 'XDELETE',
+                'rolegroup_id'  => 1,
+                'module_id'     => 4,
+                'ability'       => 'UPDATE',
+                'created_at'    => date('Y-m-d H:i:s'),
+                'updated_at'    => date('Y-m-d H:i:s')
+            ],
+            [
+                'rolegroup_id'  => 1,
+                'module_id'     => 4,
+                'ability'       => 'DELETE',
+                'created_at'    => date('Y-m-d H:i:s'),
+                'updated_at'    => date('Y-m-d H:i:s')
+            ],
+            [
+                'rolegroup_id'  => 1,
+                'module_id'     => 5,
+                'ability'       => 'READ',
+                'created_at'    => date('Y-m-d H:i:s'),
+                'updated_at'    => date('Y-m-d H:i:s')
+            ],
+            [
+                'rolegroup_id'  => 1,
+                'module_id'     => 5,
+                'ability'       => 'CREATE',
+                'created_at'    => date('Y-m-d H:i:s'),
+                'updated_at'    => date('Y-m-d H:i:s')
+            ],
+            [
+                'rolegroup_id'  => 1,
+                'module_id'     => 5,
+                'ability'       => 'UPDATE',
+                'created_at'    => date('Y-m-d H:i:s'),
+                'updated_at'    => date('Y-m-d H:i:s')
+            ],
+            [
+                'rolegroup_id'  => 1,
+                'module_id'     => 5,
+                'ability'       => 'DELETE',
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
             ]
