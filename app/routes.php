@@ -39,7 +39,10 @@ Route::group(['before' => 'authorize'], function() {
     Route::resource('uploads', 'UploadController');
     Route::resource('users', 'UsersController');
     Route::resource('currencies', 'CurrenciesController');
+    
     Route::resource('customers', 'CustomersController');
+    Route::get('api/customers',
+        array('as'=>'customers.index', 'uses'=>'CustomersController@getDatatable'));
 });
 
 // Route::controller('locations', 'LocationsController');

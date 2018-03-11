@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('pagecss')
-    <link rel="stylesheet" href="{{ asset('js/datatables/datatables.css') }}" type="text/css" cache="false"/>
+    <link rel="stylesheet" href="{{ asset('js/datatables/datatables.min.css') }}" type="text/css" cache="false"/>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
 @stop
 
@@ -20,53 +20,29 @@
         <header class="panel-heading">
             <i class="fa fa-info-sign text-muted" data-toggle="tooltip" data-placement="bottom" data-title="ajax to load the data."></i>
         </header>
-        <div class="table-responsive">
-        <?php
-        $options = array(
-            array(
-                'bVisible' => false,
-                'aTargets' => [0]
-            ),
-            array(
-                'sTitle' => 'Username',
-                'aTargets' => [1]),
-            array(
-                'sTitle' => trans('user.rolegroup'),
-                'aTargets' => [2]),
-            array(
-                'sTitle' => trans('staff.name'),
-                'aTargets' => [3]),
-            array(
-                'sTitle' => trans('user.is_active'),
-                'aTargets' => [4]
-            )
-        );
-        $columns = array('id','email','rolegroup','name', 'active');
-
-
-        ?>
-        {{-- Specify datatable with custom title and first column (id) hidden --}}
-        {{ Datatable::table()
-            ->addColumn($columns)
-            ->setUrl(route('users.index') . '?datatable=1')
-            ->setOptions('bProcessing', true)
-            ->setOptions('aoColumns', array(
-              'sWidth'=>'0%',
-              'sWidth'=>'25%',
-              'sWidth'=>'20%',
-              'sWidth'=>'20%',
-              'sWidth'=>'20%',
-              'sWidth'=>'15%'
-            ))
-            ->setOptions(['bAutoWidth'=>false])
-            ->setOptions('aoColumnDefs',
-                $options
-            )
-            ->render('datatable.basic') }}
-    </div>
+        <div class="table-responsive p-15">
+            <table id="users-table" class="table" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </section>
 @stop
 
 @section('pagejs')
-    <script src="{{ asset('js/datatables/jquery.dataTables.min.js') }}" cache="false"></script>
+    <script src="{{ asset('js/datatables/datatables.min.js') }}" cache="false"></script>
+    <script>
+        $('#users-table').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: '/api/customers',
+            scrollY:        null,
+            deferRender:    true,
+            scroller:       true
+        });
+    </script>
 @stop

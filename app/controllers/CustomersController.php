@@ -23,7 +23,7 @@ class CustomersController extends BaseController {
 		$data = [
 			'customer_access' => getAbilities('customers'),
 		];
-		
+
 		return View::make('customers.index', $data);
 	}
 
@@ -95,6 +95,11 @@ class CustomersController extends BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function getDatatable() {
+		$customers = Customer::select(['id', 'name']);
+		return Datatables::of($customers)->make();
 	}
 
 }

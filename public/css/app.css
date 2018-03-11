@@ -3433,3 +3433,12 @@ fieldset[disabled] .btn-gplus.active {
     width: 100%;
     display: block;
 }
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.p-15 {
+  padding: 15px;
+}
